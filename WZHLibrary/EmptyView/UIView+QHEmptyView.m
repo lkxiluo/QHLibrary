@@ -8,7 +8,7 @@
 
 #import "UIView+QHEmptyView.h"
 
-NSInteger const kSubViewTag = INT_MIN - 100.0;
+NSUInteger const kSubViewTag = UINT_MAX - 100.0;
 CGFloat const vspace   = 10.0f;    // 纵向间距
 CGFloat const hspace   = 10.0f;    // 横向间距
 CGFloat const kOffsety = 100.0;
@@ -20,7 +20,7 @@ void(^buttonAction)(NSInteger index);
 
 @implementation UIView (QHEmptyView)
 
-- (void)qh_showWithImage:(UIImage *)image
+- (void)qh_showEmptyViewWithImage:(UIImage *)image
               description:(NSString *)description
              buttonTitles:(NSArray *)titles
                    action:(void (^)(NSInteger index))action {
@@ -30,7 +30,13 @@ void(^buttonAction)(NSInteger index);
         && [titles count] == 0) {
         return;
     }
-    [self qh_dismiss];
+    [self qh_dismissEmptyView];
+    
+    UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    backgroundView.backgroundColor = [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1.0];
+    backgroundView.tag = kSubViewTag;
+    [self addSubview:backgroundView];
+    [self bringSubviewToFront:backgroundView];
     
     CGFloat offsetY = kOffsety;
     
@@ -59,7 +65,7 @@ void(^buttonAction)(NSInteger index);
         
         CGSize buttonSize = [self addOperatorButtonWithOffsetY:offsetY
                                                          title:titles[i]
-                                                           tag:kSubViewTag + 2 + i];
+                                                           tag:kSubViewTag + 3 + i];
         maxWidth = maxWidth > buttonSize.width ? maxWidth : buttonSize.width;
         buttonHeight = buttonSize.height;
     }
@@ -75,7 +81,7 @@ void(^buttonAction)(NSInteger index);
     }
 }
 
-- (void)qh_dismiss {
+- (void)qh_dismissEmptyView {
     
     for (UIView *subView in self.subviews) {
         
@@ -90,7 +96,7 @@ void(^buttonAction)(NSInteger index);
     
     if (buttonAction) {
         
-        NSInteger index = button.tag - (kSubViewTag + 2);
+        NSInteger index = button.tag - (kSubViewTag + 3);
         buttonAction(index);
     }
 }
@@ -104,8 +110,9 @@ void(^buttonAction)(NSInteger index);
                                         offsetY,
                                         image.size.width,
                                         image.size.height);
-    imageView.tag = kSubViewTag;
+    imageView.tag = kSubViewTag + 1;
     [self addSubview:imageView];
+    [self bringSubviewToFront:imageView];
     
     return imageView.frame.size.height;
 }
@@ -130,8 +137,9 @@ void(^buttonAction)(NSInteger index);
     descriptionLabel.text          = description;
     descriptionLabel.textAlignment = NSTextAlignmentCenter;
     descriptionLabel.numberOfLines = 0;
-    descriptionLabel.tag           = kSubViewTag + 1;
+    descriptionLabel.tag           = kSubViewTag + 2;
     [self addSubview:descriptionLabel];
+    [self bringSubviewToFront:descriptionLabel];
     
     return descriptionLabel.frame.size.height;
 }
@@ -158,6 +166,7 @@ void(^buttonAction)(NSInteger index);
      forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:title forState:UIControlStateNormal];
     [self addSubview:button];
+    [self bringSubviewToFront:button];
     
     return button.frame.size;
 }
@@ -176,9 +185,9 @@ void(^buttonAction)(NSInteger index);
     offsetX = (self.frame.size.width - totalWidth) / 2;
     for (UIView *subView in self.subviews) {
         
-        if (subView.tag >= kSubViewTag + 2) {
+        if (subView.tag >= kSubViewTag + 3) {
             
-            NSInteger buttonIndex = subView.tag - (kSubViewTag + 2);
+            NSInteger buttonIndex = subView.tag - (kSubViewTag + 3);
             CGFloat x             = offsetX + buttonIndex * (width + hspace);
             subView.frame         = CGRectMake(x,
                                                subView.frame.origin.y,
@@ -192,7 +201,7 @@ void(^buttonAction)(NSInteger index);
     
     for (UIView *subView in self.subviews) {
         
-        if (subView.tag >= kSubViewTag) {
+        if (subView.tag > kSubViewTag) {
             
             subView.frame = CGRectMake(subView.frame.origin.x,
                                        subView.frame.origin.y + dValue,

@@ -11,7 +11,7 @@
 
 typedef void(^buttonHandle)(NSInteger index);
 #define kContainerWidth  [UIScreen mainScreen].bounds.size.width - 100.0
-#define kColor [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0]
+#define kColor [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1.0]
 #define kButtonHeight 36.0
 
 @interface QHAlertView ()

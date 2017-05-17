@@ -83,7 +83,8 @@
     baseAnimation.fromValue      = [NSNumber numberWithFloat:0.0];
     baseAnimation.toValue        = [NSNumber numberWithFloat:2 * M_PI];
     baseAnimation.repeatCount    = MAXFLOAT;
-    baseAnimation.duration       = 0.5;
+    baseAnimation.duration       = 0.4;
+    baseAnimation.removedOnCompletion = NO;
     [self.pingImageView.layer addAnimation:baseAnimation forKey:nil];
 }
 

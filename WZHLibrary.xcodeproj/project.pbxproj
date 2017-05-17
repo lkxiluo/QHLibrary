@@ -30,6 +30,8 @@
 		A4A9291C1ECB004800005722 /* LoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9291B1ECB004800005722 /* LoopScrollView.m */; };
 		A4A929201ECB045600005722 /* BackgroundTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9291F1ECB045600005722 /* BackgroundTimerManager.m */; };
 		A4A929231ECB04DD00005722 /* TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A929221ECB04DD00005722 /* TimerManager.m */; };
+		A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */; };
+		A4F1AAC61ECC2F78008DFA74 /* LoopScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1AAC51ECC2F78008DFA74 /* LoopScrollViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,10 @@
 		A4A9291F1ECB045600005722 /* BackgroundTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTimerManager.m; sourceTree = "<group>"; };
 		A4A929211ECB04DD00005722 /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
 		A4A929221ECB04DD00005722 /* TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerManager.m; sourceTree = "<group>"; };
+		A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewLayout.h; sourceTree = "<group>"; };
+		A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayout.m; sourceTree = "<group>"; };
+		A4F1AAC41ECC2F78008DFA74 /* LoopScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopScrollViewViewController.h; sourceTree = "<group>"; };
+		A4F1AAC51ECC2F78008DFA74 /* LoopScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopScrollViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,8 @@
 				A43CADBA1EC59A47005A670D /* AppDelegate.m */,
 				A43CADBC1EC59A47005A670D /* ViewController.h */,
 				A43CADBD1EC59A47005A670D /* ViewController.m */,
+				A4F1AAC41ECC2F78008DFA74 /* LoopScrollViewViewController.h */,
+				A4F1AAC51ECC2F78008DFA74 /* LoopScrollViewViewController.m */,
 				A43CADBF1EC59A47005A670D /* Main.storyboard */,
 				A43CADC21EC59A47005A670D /* Assets.xcassets */,
 				A43CADC41EC59A47005A670D /* LaunchScreen.storyboard */,
@@ -210,6 +218,8 @@
 			children = (
 				A4A9291A1ECB004800005722 /* LoopScrollView.h */,
 				A4A9291B1ECB004800005722 /* LoopScrollView.m */,
+				A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayout.h */,
+				A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */,
 			);
 			path = LoopScrollView;
 			sourceTree = "<group>";
@@ -357,10 +367,12 @@
 				A4A929111ECADDC700005722 /* NSDictionary+QHSafeConvert.m in Sources */,
 				A4A929231ECB04DD00005722 /* TimerManager.m in Sources */,
 				A4A929201ECB045600005722 /* BackgroundTimerManager.m in Sources */,
+				A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayout.m in Sources */,
 				A43CADBE1EC59A47005A670D /* ViewController.m in Sources */,
 				A47DA0851ECA8E6D003BB054 /* QHAlertView.m in Sources */,
 				A4A9291C1ECB004800005722 /* LoopScrollView.m in Sources */,
 				A4A929181ECAF76E00005722 /* UIView+QHDraw.m in Sources */,
+				A4F1AAC61ECC2F78008DFA74 /* LoopScrollViewViewController.m in Sources */,
 				A4A929141ECADDC700005722 /* UIView+QHFrameLayout.m in Sources */,
 				A4A929121ECADDC700005722 /* NSString+QHValidate.m in Sources */,
 				A43CADDD1EC6A711005A670D /* QHLoadingView.m in Sources */,

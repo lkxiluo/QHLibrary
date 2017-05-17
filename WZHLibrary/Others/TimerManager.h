@@ -12,8 +12,8 @@
 extern NSString * const kTimerManagerUpdate;
 @interface TimerManager : NSObject
 
-@property (nonatomic, assign) CGFloat duration;   // 默认倒计时按秒
-@property (nonatomic, assign, readonly) NSTimeInterval timeInterval;
+@property (nonatomic, assign) CGFloat duration;   // 倒计时间隔，默认1秒
+@property (nonatomic, assign, readonly) NSTimeInterval timeInterval; // 倒计时执行次数
 
 + (instancetype)shareInstance;
 - (void)startTimer;

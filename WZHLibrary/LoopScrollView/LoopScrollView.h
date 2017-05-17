@@ -10,8 +10,15 @@
 
 typedef NS_ENUM(NSInteger, LoopScrollViewType) {
     
-    LoopScrollViewNormal = 0,
+    LoopScrollViewNormal = 0,  // 正常效果
+    LoopScrollViewFold         // 折叠效果
 };
+
+/**
+ 轮播图
+ */
 @interface LoopScrollView : UIView
+
+- (instancetype)initWithType:(LoopScrollViewType)type frame:(CGRect)frame;
 
 @end
