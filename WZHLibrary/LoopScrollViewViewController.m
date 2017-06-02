@@ -7,8 +7,16 @@
 //
 
 #import "LoopScrollViewViewController.h"
+#import "LoopScrollView.h"
 
-@interface LoopScrollViewViewController ()
+@interface LoopScrollViewViewController ()<
+UITableViewDelegate,
+UITableViewDataSource
+>
+
+@property (nonatomic, weak) UITableView *loopTypeTabelView;
+@property (nonatomic, copy) NSArray *dataArray;
+@property (nonatomic, assign) LoopScrollViewType type;
 
 @end
 
@@ -17,6 +25,77 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.dataArray = @[
+                       @"LoopScrollViewNormal",
+                       @"LoopScrollViewFold1",
+                       @"LoopScrollViewFold2",
+                       @"LoopScrollView3DFlow"
+                       ];
+    self.type = LoopScrollViewNormal;
+    [self addLoopTypeTabelView];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellId = @"CellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
+    if (cell == nil) {
+        
+        cell  = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 180.0f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    LoopScrollView *bannerView = [[LoopScrollView alloc] initWithType:self.type
+                                                                frame:CGRectMake(0.0,
+                                                                                 0.0,
+                                                                                 tableView.frame.size.width,
+                                                                                 180.0f)];
+    bannerView.imageUrlArray = @[
+                                 @"http://pic15.nipic.com/20110623/7810872_173729199142_2.jpg",
+                                 @"http://pic38.nipic.com/20140222/13141444_190705666137_2.jpg",
+                                 @"http://img4.3lian.com/img2005/05/19/14.jpg",
+                                 @"http://img.taopic.com/uploads/allimg/121214/267863-121214204F841.jpg",
+                                 @"http://img.taopic.com/uploads/allimg/121215/267862-12121520062755.jpg"
+                                 ];
+    
+    return bannerView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.type = indexPath.row;
+    [tableView reloadData];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)addLoopTypeTabelView {
+    
+    if (self.loopTypeTabelView == nil) {
+        
+        UITableView *loopTypeTabelView = [[UITableView alloc] initWithFrame:self.view.bounds
+                                                                      style:UITableViewStylePlain];
+        loopTypeTabelView.delegate   = self;
+        loopTypeTabelView.dataSource = self;
+        [self.view addSubview:loopTypeTabelView];
+        self.loopTypeTabelView       = loopTypeTabelView;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

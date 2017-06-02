@@ -10,7 +10,7 @@
 #import "QHLoadingView.h"
 
 #define kMaxContainerWidth  [UIScreen mainScreen].bounds.size.width - 40.0
-#define kMinContainerWidth  100.0
+#define kMinContainerWidth  70.0
 #define kMaxContainerHeight [UIScreen mainScreen].bounds.size.height - 40.0
 
 @interface QHProgressHub ()
@@ -44,8 +44,10 @@
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:[QHProgressHub shareInstance].backgroundView];
 }
 
-+ (void)showWithStatus:(NSString *)status {
++ (void)showWithStatus:(NSString *)status
+        finishedAction:(void (^)(void))finishedAction {
     
+    [QHProgressHub dismiss];
     if ([status length] == 0) {
         
         return;
@@ -70,9 +72,9 @@
     [QHProgressHub shareInstance].containerView.frame  = CGRectMake(0.0, 0.0, containerWidth, statusSize.height + 20.0);
     [QHProgressHub shareInstance].containerView.center = [QHProgressHub shareInstance].backgroundView.center;
     [QHProgressHub shareInstance].containerLabel.frame = CGRectMake((containerWidth - statusSize.width) / 2,
-                                                                     0.0,
-                                                                     statusSize.width,
-                                                                     [QHProgressHub shareInstance].containerView.frame.size.height);
+                                                                    0.0,
+                                                                    statusSize.width,
+                                                                    [QHProgressHub shareInstance].containerView.frame.size.height);
     [QHProgressHub shareInstance].containerLabel.text  = status;
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -83,20 +85,30 @@
         [QHProgressHub shareInstance].containerView.alpha = 1.0;
     }];
     
-    NSTimeInterval afterTime = 0.3 + status.length * 0.1 > 5.0 ? 5.0 : 0.5 + status.length * 0.1;
+    NSTimeInterval afterTime = 0.5 + status.length * 0.1 > 5.0 ? 5.0 : 0.5 + status.length * 0.1;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
                                  (int64_t)(afterTime * NSEC_PER_SEC)),
                    dispatch_get_main_queue(), ^{
-        
-        [UIView animateWithDuration:0.2 animations:^{
-            
-            [QHProgressHub shareInstance].containerView.alpha = 0.0;
-        } completion:^(BOOL finished) {
-            
-            [QHProgressHub shareInstance].containerView.alpha = 0.0;
-            [QHProgressHub dismiss];
-        }];
-    });
+                       
+                       [UIView animateWithDuration:0.2 animations:^{
+                           
+                           [QHProgressHub shareInstance].containerView.alpha = 0.0;
+                       } completion:^(BOOL finished) {
+                           
+                           [QHProgressHub shareInstance].containerView.alpha = 0.0;
+                           [QHProgressHub dismiss];
+                           
+                           if (finishedAction) {
+                               
+                               finishedAction();
+                           }
+                       }];
+                   });
+}
+
++ (void)showWithStatus:(NSString *)status {
+    
+    [QHProgressHub showWithStatus:status finishedAction:nil];
 }
 
 + (void)dismiss {

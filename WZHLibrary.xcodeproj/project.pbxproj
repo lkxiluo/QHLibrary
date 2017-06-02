@@ -20,6 +20,10 @@
 		A43CADDD1EC6A711005A670D /* QHLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A43CADDC1EC6A711005A670D /* QHLoadingView.m */; };
 		A43CADE01EC70466005A670D /* loading_image_center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A43CADDE1EC70466005A670D /* loading_image_center@2x.png */; };
 		A43CADE11EC70466005A670D /* loading_image_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A43CADDF1EC70466005A670D /* loading_image_circle@2x.png */; };
+		A476A4161EE13915009DC615 /* LoopCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A476A4151EE13915009DC615 /* LoopCollectionViewCell.m */; };
+		A476A4181EE13F94009DC615 /* loop_place@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A476A4171EE13F94009DC615 /* loop_place@2x.png */; };
+		A476A41B1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m in Sources */ = {isa = PBXBuildFile; fileRef = A476A41A1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m */; };
+		A476A41E1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = A476A41D1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m */; };
 		A47DA0851ECA8E6D003BB054 /* QHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A47DA0841ECA8E6D003BB054 /* QHAlertView.m */; };
 		A4A929111ECADDC700005722 /* NSDictionary+QHSafeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A929081ECADDC700005722 /* NSDictionary+QHSafeConvert.m */; };
 		A4A929121ECADDC700005722 /* NSString+QHValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9290A1ECADDC700005722 /* NSString+QHValidate.m */; };
@@ -30,7 +34,7 @@
 		A4A9291C1ECB004800005722 /* LoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9291B1ECB004800005722 /* LoopScrollView.m */; };
 		A4A929201ECB045600005722 /* BackgroundTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9291F1ECB045600005722 /* BackgroundTimerManager.m */; };
 		A4A929231ECB04DD00005722 /* TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A929221ECB04DD00005722 /* TimerManager.m */; };
-		A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */; };
+		A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m */; };
 		A4F1AAC61ECC2F78008DFA74 /* LoopScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1AAC51ECC2F78008DFA74 /* LoopScrollViewViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,13 @@
 		A43CADDC1EC6A711005A670D /* QHLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHLoadingView.m; sourceTree = "<group>"; };
 		A43CADDE1EC70466005A670D /* loading_image_center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_image_center@2x.png"; sourceTree = "<group>"; };
 		A43CADDF1EC70466005A670D /* loading_image_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_image_circle@2x.png"; sourceTree = "<group>"; };
+		A476A4141EE13915009DC615 /* LoopCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewCell.h; sourceTree = "<group>"; };
+		A476A4151EE13915009DC615 /* LoopCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewCell.m; sourceTree = "<group>"; };
+		A476A4171EE13F94009DC615 /* loop_place@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loop_place@2x.png"; sourceTree = "<group>"; };
+		A476A4191EE14E33009DC615 /* LoopCollectionViewLayoutFold2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewLayoutFold2.h; sourceTree = "<group>"; };
+		A476A41A1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayoutFold2.m; sourceTree = "<group>"; };
+		A476A41C1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewLayout3DFlow.h; sourceTree = "<group>"; };
+		A476A41D1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayout3DFlow.m; sourceTree = "<group>"; };
 		A47DA0831ECA8E6D003BB054 /* QHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAlertView.h; sourceTree = "<group>"; };
 		A47DA0841ECA8E6D003BB054 /* QHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAlertView.m; sourceTree = "<group>"; };
 		A4A929071ECADDC700005722 /* NSDictionary+QHSafeConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QHSafeConvert.h"; sourceTree = "<group>"; };
@@ -77,8 +88,8 @@
 		A4A9291F1ECB045600005722 /* BackgroundTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTimerManager.m; sourceTree = "<group>"; };
 		A4A929211ECB04DD00005722 /* TimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
 		A4A929221ECB04DD00005722 /* TimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerManager.m; sourceTree = "<group>"; };
-		A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewLayout.h; sourceTree = "<group>"; };
-		A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayout.m; sourceTree = "<group>"; };
+		A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopCollectionViewLayoutFold1.h; sourceTree = "<group>"; };
+		A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayoutFold1.m; sourceTree = "<group>"; };
 		A4F1AAC41ECC2F78008DFA74 /* LoopScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopScrollViewViewController.h; sourceTree = "<group>"; };
 		A4F1AAC51ECC2F78008DFA74 /* LoopScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopScrollViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +144,9 @@
 		A43CADB51EC59A47005A670D /* WZHLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A476A4211EE15878009DC615 /* ViewControllerTransitionAnimation */,
+				A476A4201EE1524E009DC615 /* ImageBrowser */,
+				A476A41F1EE15242009DC615 /* Refresh */,
 				A4A9291D1ECB042800005722 /* Others */,
 				A4A929061ECACEDD00005722 /* LoopScrollView */,
 				A47DA0861ECA9B87003BB054 /* Category */,
@@ -194,6 +208,27 @@
 			path = AlertView;
 			sourceTree = "<group>";
 		};
+		A476A41F1EE15242009DC615 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		A476A4201EE1524E009DC615 /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageBrowser;
+			sourceTree = "<group>";
+		};
+		A476A4211EE15878009DC615 /* ViewControllerTransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllerTransitionAnimation;
+			sourceTree = "<group>";
+		};
 		A47DA0861ECA9B87003BB054 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +253,15 @@
 			children = (
 				A4A9291A1ECB004800005722 /* LoopScrollView.h */,
 				A4A9291B1ECB004800005722 /* LoopScrollView.m */,
-				A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayout.h */,
-				A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayout.m */,
+				A476A4141EE13915009DC615 /* LoopCollectionViewCell.h */,
+				A476A4151EE13915009DC615 /* LoopCollectionViewCell.m */,
+				A476A4171EE13F94009DC615 /* loop_place@2x.png */,
+				A4F1AAC11ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.h */,
+				A4F1AAC21ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m */,
+				A476A4191EE14E33009DC615 /* LoopCollectionViewLayoutFold2.h */,
+				A476A41A1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m */,
+				A476A41C1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.h */,
+				A476A41D1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m */,
 			);
 			path = LoopScrollView;
 			sourceTree = "<group>";
@@ -302,6 +344,7 @@
 				A43CADD51EC5A9FD005A670D /* empty_nomarl@2x.png in Resources */,
 				A43CADE01EC70466005A670D /* loading_image_center@2x.png in Resources */,
 				A43CADC11EC59A47005A670D /* Main.storyboard in Resources */,
+				A476A4181EE13F94009DC615 /* loop_place@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A476A41E1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m in Sources */,
 				A4A929131ECADDC700005722 /* UIColor+QHConvert.m in Sources */,
 				A43CADD31EC59C18005A670D /* UIView+QHEmptyView.m in Sources */,
 				A43CADD91EC5C0EF005A670D /* QHProgressHub.m in Sources */,
@@ -367,10 +411,12 @@
 				A4A929111ECADDC700005722 /* NSDictionary+QHSafeConvert.m in Sources */,
 				A4A929231ECB04DD00005722 /* TimerManager.m in Sources */,
 				A4A929201ECB045600005722 /* BackgroundTimerManager.m in Sources */,
-				A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayout.m in Sources */,
+				A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m in Sources */,
 				A43CADBE1EC59A47005A670D /* ViewController.m in Sources */,
 				A47DA0851ECA8E6D003BB054 /* QHAlertView.m in Sources */,
 				A4A9291C1ECB004800005722 /* LoopScrollView.m in Sources */,
+				A476A4161EE13915009DC615 /* LoopCollectionViewCell.m in Sources */,
+				A476A41B1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m in Sources */,
 				A4A929181ECAF76E00005722 /* UIView+QHDraw.m in Sources */,
 				A4F1AAC61ECC2F78008DFA74 /* LoopScrollViewViewController.m in Sources */,
 				A4A929141ECADDC700005722 /* UIView+QHFrameLayout.m in Sources */,

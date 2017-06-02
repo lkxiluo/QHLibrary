@@ -15,6 +15,14 @@
 + (void)show;
 /**
  显示提示
+ 
+ @param status 提示内容
+ @param finishedAction 显示结束后的动作
+ */
++ (void)showWithStatus:(NSString *)status
+        finishedAction:(void (^)(void))finishedAction;
+/**
+ 显示提示
  @param status 提示内容
  */
 + (void)showWithStatus:(NSString *)status;

@@ -11,6 +11,6 @@
 /**
  折叠效果布局
  */
-@interface LoopCollectionViewLayout : UICollectionViewLayout
+@interface LoopCollectionViewLayoutFold1 : UICollectionViewLayout
 
 @end

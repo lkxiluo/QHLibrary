@@ -56,7 +56,7 @@
 - (UIImage *)qh_imageWithColor:(UIColor *)color blendMode:(CGBlendMode)blendMode;
 
 /**
- 根据颜色绘制图片(消耗CPU，少用)
+ 根据颜色绘制图片
  
  @param color 颜色值
  @return 图片
