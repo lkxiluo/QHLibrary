@@ -18,7 +18,8 @@ static NSString *const kItemCellId = @"kItemCellId";
 UICollectionViewDelegate,
 UICollectionViewDataSource> {
     
-    LoopScrollViewType _type;
+    LoopScrollViewType _type;   // 轮播图显示类型
+    NSInteger _itemsCount;      // 图片数
 }
 
 @property (nonatomic, weak) UICollectionView *loopCollectionView;
@@ -66,12 +67,19 @@ UICollectionViewDataSource> {
 }
 
 #pragma mark - UICollectionDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
-    return self.imageNameArray.count <= 0 ? self.imageUrlArray.count : self.imageNameArray.count;
+    return (_itemsCount == 1 && _type == LoopScrollViewNormal) ? 1 : 3;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
+    
+    return _itemsCount;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     LoopCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kItemCellId
                                                                              forIndexPath:indexPath];
@@ -148,15 +156,28 @@ UICollectionViewDataSource> {
 }
 
 - (void)setImageNameArray:(NSArray *)imageNameArray {
-    
-    _imageUrlArray     = nil;
-    _imageNameArray    = imageNameArray;
+
+    _imageUrlArray  = nil;
+    _imageNameArray = imageNameArray;
+    _itemsCount     = _imageNameArray.count;
+    [self reloadData];
 }
 
 - (void)setImageUrlArray:(NSArray *)imageUrlArray {
+
+    _imageNameArray = nil;
+    _imageUrlArray  = imageUrlArray;
+    _itemsCount     = _imageUrlArray.count;
+    [self reloadData];
+}
+
+- (void)reloadData {
     
-    _imageNameArray     = nil;
-    _imageUrlArray      = imageUrlArray;
+    [self.loopCollectionView reloadData];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    [self.loopCollectionView scrollToItemAtIndexPath:indexPath
+                                    atScrollPosition:UICollectionViewScrollPositionCenteredVertically
+                                            animated:NO];
 }
 
 @end

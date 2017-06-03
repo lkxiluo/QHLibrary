@@ -12,7 +12,10 @@
 @interface LoopScrollViewViewController ()<
 UITableViewDelegate,
 UITableViewDataSource
->
+> {
+    
+    CGFloat _loopHeight;
+}
 
 @property (nonatomic, weak) UITableView *loopTypeTabelView;
 @property (nonatomic, copy) NSArray *dataArray;
@@ -31,7 +34,8 @@ UITableViewDataSource
                        @"LoopScrollViewFold2",
                        @"LoopScrollView3DFlow"
                        ];
-    self.type = LoopScrollViewNormal;
+    self.type   = LoopScrollViewNormal;
+    _loopHeight = 180.0f;
     [self addLoopTypeTabelView];
 }
 
@@ -57,7 +61,7 @@ UITableViewDataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 180.0f;
+    return _loopHeight;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -66,7 +70,7 @@ UITableViewDataSource
                                                                 frame:CGRectMake(0.0,
                                                                                  0.0,
                                                                                  tableView.frame.size.width,
-                                                                                 180.0f)];
+                                                                                 _loopHeight)];
     bannerView.imageUrlArray = @[
                                  @"http://pic15.nipic.com/20110623/7810872_173729199142_2.jpg",
                                  @"http://pic38.nipic.com/20140222/13141444_190705666137_2.jpg",
@@ -81,6 +85,13 @@ UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     self.type = indexPath.row;
+    if (self.type == LoopScrollViewNormal) {
+        
+        _loopHeight = 180.0f;
+    } else {
+        
+        _loopHeight = 150.0f;
+    }
     [tableView reloadData];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
