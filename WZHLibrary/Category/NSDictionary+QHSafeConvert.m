@@ -15,13 +15,13 @@
     if (!aKey) {
         return nil;
     }
-    return [self objectForKey:aKey];
+    return [[self objectForKey:aKey] isKindOfClass:[NSNull class]] ? nil : [self objectForKey:aKey];
 }
 
 - (NSString *)qh_stringForKeySafe:(id)aKey
 {
     NSString *value = [self objectForKeySafe:aKey];
-    if (value && ![value isKindOfClass:[NSNull class]]) {
+    if (value) {
         
         if ([value isKindOfClass:[NSString class]]) {
             
@@ -38,7 +38,7 @@
 - (NSNumber *)qh_numberForKeySafe:(id)aKey
 {
     NSNumber *value = [self objectForKeySafe:aKey];
-    if (value && ![value isKindOfClass:[NSNull class]]) {
+    if (value) {
         
         if ([value isKindOfClass:[NSNumber class]]) {
             

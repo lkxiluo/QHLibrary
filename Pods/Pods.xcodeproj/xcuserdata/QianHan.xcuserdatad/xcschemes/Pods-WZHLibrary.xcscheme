@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F1588E4B9018D3E023A644DD831CB02B'
+               BlueprintIdentifier = '6CA5FE5F177EBBD73AE921770A1C62D9'
                BlueprintName = 'Pods-WZHLibrary'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-WZHLibrary.a'>

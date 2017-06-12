@@ -64,11 +64,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>WMPageController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>YTKNetwork.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -78,6 +73,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>175B076ED45EB1A3E40F58BA14036467</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B7C72B7ED00320046BBA6A2AD832FA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64A1087F3BC035BCC16236DC758103D9</key>
+		<key>38D8829C15739A442C130374703395E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CA5FE5F177EBBD73AE921770A1C62D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>93118D44FF7AC639C78A61AF8CC623D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,11 +122,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB8667C5489143698806CFE5D4832551</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C791F0A928C1A8FE97074DFC9ACF4E75</key>
 		<dict>
 			<key>primary</key>
@@ -138,11 +133,6 @@
 			<true/>
 		</dict>
 		<key>D31F2E1140FD881D5FEB76F35D954576</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1588E4B9018D3E023A644DD831CB02B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

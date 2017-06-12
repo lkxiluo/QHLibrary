@@ -25,6 +25,12 @@
 		A476A41B1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m in Sources */ = {isa = PBXBuildFile; fileRef = A476A41A1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m */; };
 		A476A41E1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = A476A41D1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m */; };
 		A47DA0851ECA8E6D003BB054 /* QHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A47DA0841ECA8E6D003BB054 /* QHAlertView.m */; };
+		A482716A1EEBED8600F7A062 /* WMPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A482715E1EEBED8600F7A062 /* WMPanGestureRecognizer.m */; };
+		A482716B1EEBED8600F7A062 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A48271611EEBED8600F7A062 /* WMMenuItem.m */; };
+		A482716C1EEBED8600F7A062 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48271631EEBED8600F7A062 /* WMMenuView.m */; };
+		A482716D1EEBED8600F7A062 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48271651EEBED8600F7A062 /* WMProgressView.m */; };
+		A482716E1EEBED8600F7A062 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48271671EEBED8600F7A062 /* WMScrollView.m */; };
+		A482716F1EEBED8600F7A062 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48271691EEBED8600F7A062 /* WMPageController.m */; };
 		A4A929111ECADDC700005722 /* NSDictionary+QHSafeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A929081ECADDC700005722 /* NSDictionary+QHSafeConvert.m */; };
 		A4A929121ECADDC700005722 /* NSString+QHValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9290A1ECADDC700005722 /* NSString+QHValidate.m */; };
 		A4A929131ECADDC700005722 /* UIColor+QHConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A9290C1ECADDC700005722 /* UIColor+QHConvert.m */; };
@@ -70,6 +76,18 @@
 		A476A41D1EE14F95009DC615 /* LoopCollectionViewLayout3DFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopCollectionViewLayout3DFlow.m; sourceTree = "<group>"; };
 		A47DA0831ECA8E6D003BB054 /* QHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAlertView.h; sourceTree = "<group>"; };
 		A47DA0841ECA8E6D003BB054 /* QHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAlertView.m; sourceTree = "<group>"; };
+		A482715D1EEBED8500F7A062 /* WMPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPanGestureRecognizer.h; sourceTree = "<group>"; };
+		A482715E1EEBED8600F7A062 /* WMPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPanGestureRecognizer.m; sourceTree = "<group>"; };
+		A48271601EEBED8600F7A062 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		A48271611EEBED8600F7A062 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		A48271621EEBED8600F7A062 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		A48271631EEBED8600F7A062 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		A48271641EEBED8600F7A062 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		A48271651EEBED8600F7A062 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		A48271661EEBED8600F7A062 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		A48271671EEBED8600F7A062 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		A48271681EEBED8600F7A062 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		A48271691EEBED8600F7A062 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		A4A929071ECADDC700005722 /* NSDictionary+QHSafeConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QHSafeConvert.h"; sourceTree = "<group>"; };
 		A4A929081ECADDC700005722 /* NSDictionary+QHSafeConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QHSafeConvert.m"; sourceTree = "<group>"; };
 		A4A929091ECADDC700005722 /* NSString+QHValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QHValidate.h"; sourceTree = "<group>"; };
@@ -144,6 +162,7 @@
 		A43CADB51EC59A47005A670D /* WZHLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A482715A1EEBED4200F7A062 /* SlideTabViewController */,
 				A476A4211EE15878009DC615 /* ViewControllerTransitionAnimation */,
 				A476A4201EE1524E009DC615 /* ImageBrowser */,
 				A476A41F1EE15242009DC615 /* Refresh */,
@@ -246,6 +265,49 @@
 				A4A929171ECAF76E00005722 /* UIView+QHDraw.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		A482715A1EEBED4200F7A062 /* SlideTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A482715B1EEBED8500F7A062 /* WMPageController */,
+			);
+			path = SlideTabViewController;
+			sourceTree = "<group>";
+		};
+		A482715B1EEBED8500F7A062 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				A482715C1EEBED8500F7A062 /* Gesture */,
+				A482715F1EEBED8600F7A062 /* WMMenuView */,
+				A48271681EEBED8600F7A062 /* WMPageController.h */,
+				A48271691EEBED8600F7A062 /* WMPageController.m */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		A482715C1EEBED8500F7A062 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				A482715D1EEBED8500F7A062 /* WMPanGestureRecognizer.h */,
+				A482715E1EEBED8600F7A062 /* WMPanGestureRecognizer.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		A482715F1EEBED8600F7A062 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				A48271601EEBED8600F7A062 /* WMMenuItem.h */,
+				A48271611EEBED8600F7A062 /* WMMenuItem.m */,
+				A48271621EEBED8600F7A062 /* WMMenuView.h */,
+				A48271631EEBED8600F7A062 /* WMMenuView.m */,
+				A48271641EEBED8600F7A062 /* WMProgressView.h */,
+				A48271651EEBED8600F7A062 /* WMProgressView.m */,
+				A48271661EEBED8600F7A062 /* WMScrollView.h */,
+				A48271671EEBED8600F7A062 /* WMScrollView.m */,
+			);
+			path = WMMenuView;
 			sourceTree = "<group>";
 		};
 		A4A929061ECACEDD00005722 /* LoopScrollView */ = {
@@ -410,16 +472,22 @@
 				A4A929151ECADDC700005722 /* UIImage+QHReDraw.m in Sources */,
 				A4A929111ECADDC700005722 /* NSDictionary+QHSafeConvert.m in Sources */,
 				A4A929231ECB04DD00005722 /* TimerManager.m in Sources */,
+				A482716D1EEBED8600F7A062 /* WMProgressView.m in Sources */,
 				A4A929201ECB045600005722 /* BackgroundTimerManager.m in Sources */,
 				A4F1AAC31ECC1F6C008DFA74 /* LoopCollectionViewLayoutFold1.m in Sources */,
+				A482716F1EEBED8600F7A062 /* WMPageController.m in Sources */,
+				A482716A1EEBED8600F7A062 /* WMPanGestureRecognizer.m in Sources */,
 				A43CADBE1EC59A47005A670D /* ViewController.m in Sources */,
 				A47DA0851ECA8E6D003BB054 /* QHAlertView.m in Sources */,
 				A4A9291C1ECB004800005722 /* LoopScrollView.m in Sources */,
 				A476A4161EE13915009DC615 /* LoopCollectionViewCell.m in Sources */,
 				A476A41B1EE14E33009DC615 /* LoopCollectionViewLayoutFold2.m in Sources */,
+				A482716B1EEBED8600F7A062 /* WMMenuItem.m in Sources */,
 				A4A929181ECAF76E00005722 /* UIView+QHDraw.m in Sources */,
 				A4F1AAC61ECC2F78008DFA74 /* LoopScrollViewViewController.m in Sources */,
 				A4A929141ECADDC700005722 /* UIView+QHFrameLayout.m in Sources */,
+				A482716C1EEBED8600F7A062 /* WMMenuView.m in Sources */,
+				A482716E1EEBED8600F7A062 /* WMScrollView.m in Sources */,
 				A4A929121ECADDC700005722 /* NSString+QHValidate.m in Sources */,
 				A43CADDD1EC6A711005A670D /* QHLoadingView.m in Sources */,
 				A43CADBB1EC59A47005A670D /* AppDelegate.m in Sources */,

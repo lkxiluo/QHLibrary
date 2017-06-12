@@ -4,7 +4,7 @@ target 'WZHLibrary' do
 
 pod 'YTKNetwork'
 pod 'FMDB'
-pod 'WMPageController'
+#pod 'WMPageController'
 pod 'SDWebImage'
 pod 'MWPhotoBrowser'
 pod 'Masonry'

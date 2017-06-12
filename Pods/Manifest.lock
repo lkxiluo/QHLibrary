@@ -30,7 +30,6 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - WMPageController (2.2.1)
   - YTKNetwork (2.0.3):
     - AFNetworking (~> 3.0)
 
@@ -43,7 +42,6 @@ DEPENDENCIES:
   - NSDate-Escort
   - SAMKeychain
   - SDWebImage
-  - WMPageController
   - YTKNetwork
 
 SPEC CHECKSUMS:
@@ -57,9 +55,8 @@ SPEC CHECKSUMS:
   NSDate-Escort: 3469fefab423c094108c2e864416b61b6ac0edbc
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
-  WMPageController: 181bcc9b1fb7c9c3466bff66012552953a547d28
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
 
-PODFILE CHECKSUM: 162a7bf58cce17b18d855eda6c19f1500ae16308
+PODFILE CHECKSUM: bd3d4ea97d429cd8e46c54214eef0c3420c67a3d
 
 COCOAPODS: 1.2.1.beta.1
