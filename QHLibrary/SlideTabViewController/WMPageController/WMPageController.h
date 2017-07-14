@@ -361,6 +361,8 @@ extern NSString *const WMControllerDidFullyDisplayedNotification;
 /** 当 app 即将回到前台接收到的通知 */
 - (void)willEnterForeground:(NSNotification *)notification;
 
+/** 设置选中下标时，是否执行动画 */
+- (void)settingSelectIndexWithAnimation:(int)index;
 @end
 
 NS_ASSUME_NONNULL_END

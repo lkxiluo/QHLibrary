@@ -11,6 +11,6 @@ pod 'Masonry'
 pod 'SAMKeychain'
 pod 'NSDate-Escort'
 pod 'CocoaSecurity'
-pod 'MBProgressHUD'
+pod 'FSCalendar'
     
 end

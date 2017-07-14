@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  WZHLibrary
+//  QHLibraryExample
 //
-//  Created by QianHan on 2017/5/12.
+//  Created by QianHan on 2017/7/14.
 //  Copyright © 2017年 karl.luo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "QHProgressHub.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,13 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window                 = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    ViewController *viewController = [[ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window.rootViewController = nav;
     return YES;
 }
 

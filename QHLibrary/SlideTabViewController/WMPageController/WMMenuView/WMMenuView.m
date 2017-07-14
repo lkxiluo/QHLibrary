@@ -200,6 +200,7 @@ static NSInteger const WMBadgeViewTagOffset = 1212;
     [self addItems];
     [self makeStyle];
     [self addBadgeViews];
+    [self addSeperatorView];
 }
 
 - (void)slideMenuAtProgress:(CGFloat)progress {
@@ -231,6 +232,24 @@ static NSInteger const WMBadgeViewTagOffset = 1212;
     [self.selItem setSelected:NO withAnimation:NO];
     self.selItem = item;
     [self.selItem setSelected:YES withAnimation:NO];
+    [self.progressView setProgressWithOutAnimate:index];
+    if ([self.delegate respondsToSelector:@selector(menuView:didSelesctedIndex:currentIndex:)]) {
+        [self.delegate menuView:self didSelesctedIndex:index currentIndex:currentIndex];
+    }
+    [self refreshContenOffset];
+}
+
+- (void)settingSelectIndexWithAnimation:(NSInteger)index
+{
+    NSInteger tag = index + WMMenuItemTagOffset;
+    NSInteger currentIndex = self.selItem.tag - WMMenuItemTagOffset;
+    self.selectIndex = index;
+    if (index == currentIndex || !self.selItem) { return; }
+    
+    WMMenuItem *item = (WMMenuItem *)[self viewWithTag:tag];
+    [self.selItem setSelected:NO withAnimation:YES];
+    self.selItem = item;
+    [self.selItem setSelected:YES withAnimation:YES];
     [self.progressView setProgressWithOutAnimate:index];
     if ([self.delegate respondsToSelector:@selector(menuView:didSelesctedIndex:currentIndex:)]) {
         [self.delegate menuView:self didSelesctedIndex:index currentIndex:currentIndex];
@@ -448,9 +467,9 @@ static NSInteger const WMBadgeViewTagOffset = 1212;
     if (!self.seperatorView) {
         
         UIView *seperatorView = [[UIView alloc] initWithFrame:CGRectMake(0.0,
-                                                                         self.scrollView.frame.size.height - 1.0,
+                                                                         self.scrollView.frame.size.height - 0.5,
                                                                          self.scrollView.frame.size.width,
-                                                                         1.0)];
+                                                                         0.5)];
         seperatorView.backgroundColor = [UIColor colorWithRed:221.0 / 255.0
                                                         green:221.0 / 255.0
                                                          blue:221.0 / 255.0
@@ -459,7 +478,7 @@ static NSInteger const WMBadgeViewTagOffset = 1212;
         self.seperatorView = seperatorView;
     }
     
-    self.seperatorView.hidden = self.isShowSeperatorView;
+    self.seperatorView.hidden = !self.isShowSeperatorView;
 }
 
 - (void)addItems {

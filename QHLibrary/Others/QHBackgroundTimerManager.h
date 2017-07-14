@@ -11,7 +11,7 @@
 /**
  延长程序在后台运行的时间，确保计时器等能在后台依旧运行
  */
-@interface BackgroundTimerManager : NSObject
+@interface QHBackgroundTimerManager : NSObject
 
 + (instancetype)shareInstance;
 

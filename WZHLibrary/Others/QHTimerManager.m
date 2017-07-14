@@ -6,26 +6,27 @@
 //  Copyright © 2017年 karl.luo. All rights reserved.
 //
 
-#import "TimerManager.h"
+#import "QHTimerManager.h"
 #import "BackgroundTimerManager.h"
 
 NSString * const kTimerManagerUpdate = @"kTimerManagerUpdate";
 
-@interface TimerManager () {
+@interface QHTimerManager () {
+    
     NSTimer *_timer;
 }
 
 @end
 
-static TimerManager *timerManager = nil;
+static QHTimerManager *timerManager = nil;
 static dispatch_once_t onceToken;
-@implementation TimerManager
+@implementation QHTimerManager
 
 + (instancetype)shareInstance {
     
     dispatch_once(&onceToken, ^{
         
-        timerManager = [[TimerManager alloc] init];
+        timerManager = [[QHTimerManager alloc] init];
         [timerManager setTimeInterval:0];
         timerManager.duration = 1.0;
     });

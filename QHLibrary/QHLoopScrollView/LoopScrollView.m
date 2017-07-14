@@ -174,14 +174,14 @@ UICollectionViewDataSource> {
 - (void)reloadData {
     
     [self.loopCollectionView reloadData];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSLog(@"`````jjj");
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
-        [self.loopCollectionView scrollToItemAtIndexPath:indexPath
-                                        atScrollPosition:UICollectionViewScrollPositionNone
-                                                animated:NO];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        
+//        NSLog(@"`````jjj");
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+//        [self.loopCollectionView scrollToItemAtIndexPath:indexPath
+//                                        atScrollPosition:UICollectionViewScrollPositionNone
+//                                                animated:NO];
+//    });
 }
 
 @end

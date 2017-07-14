@@ -106,4 +106,7 @@ typedef NS_ENUM(NSUInteger, WMMenuViewLayoutMode) {
  */
 - (void)updateBadgeViewAtIndex:(NSInteger)index;
 
+// 设置选中下标，执行动画
+- (void)settingSelectIndexWithAnimation:(NSInteger)index;
+
 @end

@@ -6,24 +6,24 @@
 //  Copyright © 2017年 karl.luo. All rights reserved.
 //
 
-#import "BackgroundTimerManager.h"
+#import "QHBackgroundTimerManager.h"
 #import <UIKit/UIKit.h>
 
-@interface BackgroundTimerManager ()
+@interface QHBackgroundTimerManager ()
 
 @property (nonatomic, assign) __block UIBackgroundTaskIdentifier taskId;
 
 @end
 
-@implementation BackgroundTimerManager
+@implementation QHBackgroundTimerManager
 
-static BackgroundTimerManager *timerManager = nil;
+static QHBackgroundTimerManager *timerManager = nil;
 static dispatch_once_t onceToken;
 + (instancetype)shareInstance {
     
     dispatch_once(&onceToken, ^{
         
-        timerManager = [[BackgroundTimerManager alloc] init];
+        timerManager = [[QHBackgroundTimerManager alloc] init];
     });
     return timerManager;
 }

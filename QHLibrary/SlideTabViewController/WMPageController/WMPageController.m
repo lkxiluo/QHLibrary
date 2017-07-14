@@ -137,6 +137,18 @@ static NSInteger const kWMControllerCountUndefined = -1;
     }
 }
 
+// 设置选中下标，执行动画
+- (void)settingSelectIndexWithAnimation:(int)index
+{
+    _selectIndex = index;
+    _markedSelectIndex = kWMUndefinedIndex;
+    if (self.menuView && _hasInited) {
+        [self.menuView settingSelectIndexWithAnimation:index];
+    } else {
+        _markedSelectIndex = index;
+    }
+}
+
 - (void)setProgressViewIsNaughty:(BOOL)progressViewIsNaughty {
     _progressViewIsNaughty = progressViewIsNaughty;
     if (self.menuView) {

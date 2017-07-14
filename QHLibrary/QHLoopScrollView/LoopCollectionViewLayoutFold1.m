@@ -30,7 +30,6 @@
                                                         (self.viewWidth - self.itemWidth) / 2,
                                                         0,
                                                         - (self.viewWidth - self.itemWidth) / 2);
-    
 }
 
 - (CGSize)collectionViewContentSize {
@@ -104,7 +103,6 @@
                 
                 for (NSIndexPath *indexPath in indexPathArray) {
                     
-                    NSLog(@"%ld %ld %ld", indexPath.section, indexPath.row, currentIndex - preItemsCount);
                     UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
                     [layoutArray addObject:attributes];
                 }
@@ -121,7 +119,6 @@
     
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     attributes.size     = self.itemSize;
-  
     CGFloat cY          = self.collectionView.contentOffset.x + self.viewWidth / 2;
     CGFloat attributesY = 0.0f;
     for (NSInteger i = 0; i <= indexPath.section; i++) {
@@ -135,16 +132,17 @@
             attributesY += itemNumber * self.itemWidth;
         }
     }
-    attributesY += self.itemWidth / 2;
+    attributesY         += self.itemWidth / 2;
     attributes.zIndex   = -ABS(attributesY - cY);
 
     CGFloat delta        = cY - attributesY;
-    CGFloat ratio        = - delta / (self.viewWidth * 2);
+    NSLog(@"%ld %ld %f", indexPath.section, indexPath.row, delta);
+    CGFloat ratio        = - delta / (self.itemWidth * 2);
     CGFloat scale        = 1 - ABS(delta) / (self.itemWidth * 6.0) * cos(ratio * M_PI_4);
     attributes.transform = CGAffineTransformMakeScale(scale, scale);
     CGFloat centerY      = attributesY;
     centerY              = cY + (attributesY - cY) * scale;
-    attributes.center = CGPointMake(centerY, CGRectGetHeight(self.collectionView.frame) / 2);
+    attributes.center    = CGPointMake(centerY, CGRectGetHeight(self.collectionView.frame) / 2);
     
     return attributes;
 }
